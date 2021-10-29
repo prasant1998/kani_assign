@@ -15,19 +15,40 @@ ANSWER: echo "Ab1Cd2Ef3Gh4Ij5….." | sed 's/./\L&/g'
 
 4. Write a shell/python script/program to return true if the opening and closing braces
 are complete, otherwise false.
+
 e.g:
+
 a. Input string:
+
 List { information {{about the FILEs (the current directory by default). Sort entries
 alphabetically if} none of -cftuvSUX }nor --sort } is specified.
+
 Output: True
 
-
-
 b. Input string:
+
 Performs { the specified action on the files. { Valid actions are view, cat (uses only
 "copious output" rules { and sends output to STDOUT) , compose, com‐posetyped, edit and
 print. If no action is specified, the action will be determined by how the program was called.}
+
 Output: False
+
+ANSWER: Done this question in Python Language.
+
+line=input("Input string: ")
+count_i = 0;
+count_j = 0;
+for i in range(0,len(line)):
+    if (line[i] == '{'):
+        count_i = count_i+1;
+for j in range(0,len(line)):
+    if (line[j] == '}'):
+        count_j = count_j+1;
+if (count_i == count_j):
+    print ("True");
+else:
+    print ("False");
+
 
 
 
